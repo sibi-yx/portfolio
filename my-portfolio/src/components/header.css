@@ -1,0 +1,75 @@
+:root{
+cursor:pointer;
+}
+.hc-burger:focus{outline:2px solid rgba(220,20,60,0.18); border-radius:6px}
+
+
+/* Accent band under header for visual separation */
+.hc-accent-band{
+height:4px;
+background: linear-gradient(90deg, transparent, rgba(220,20,60,0.12), transparent);
+}
+
+
+/* Mobile styles */
+@media (max-width: 880px){
+.hc-container{padding:14px 18px}
+
+
+.hc-burger{display:inline-flex; align-items:center; justify-content:center}
+
+
+.hc-nav{
+position:fixed;
+top:0;
+right:0;
+height:100vh;
+width:300px;
+max-width:85%;
+padding:90px 20px 20px 20px;
+background: linear-gradient(180deg, rgba(10,10,10,0.98), rgba(0,0,0,0.99));
+flex-direction:column;
+gap:18px;
+transform:translateX(110%);
+transition:transform 280ms cubic-bezier(.2,.9,.3,1);
+box-shadow: -20px 40px 80px rgba(0,0,0,0.6);
+}
+
+
+.hc-nav.open{
+transform:translateX(0);
+}
+
+
+.hc-nav-link{
+font-size:18px;
+padding:12px 10px;
+color:#d6d6d6;
+width:100%;
+border-radius:8px;
+}
+
+
+.hc-nav-link:hover{background:rgba(255,255,255,0.02); color:#fff}
+
+
+.hc-cta{
+width:100%;
+text-align:center;
+padding:12px 14px;
+border-radius:12px;
+}
+}
+
+
+/* Extremely small screens */
+@media (max-width:420px){
+.hc-logo-text{font-size:16px}
+.hc-nav-link{font-size:16px}
+}
+
+
+/* Optional: reduce motion preference */
+@media (prefers-reduced-motion: reduce){
+.hc-nav, .hc-nav.open, .hc-cta, .hc-nav-link{transition:none}
+}
